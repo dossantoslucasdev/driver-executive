@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas R. S. Vaciloto | Motorista Executivo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0b0c0e;
+      color: #e5e7eb;
+    }
+
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f6d365 0%, #d4af37 50%, #aa771c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-bg {
+      background: linear-gradient(135deg, #d4af37 0%, #aa771c 100%);
+    }
+
+    .card-dark {
+      background: linear-gradient(145deg, #16181d, #0f1013);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .pulse-green {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 10px 12px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+  </style>
+</head>
+<body class="pb-28 lg:pb-12">
+
+  <!-- Status Bar Topo -->
+  <div class="bg-zinc-950 border-b border-amber-500/20 py-2 px-4 text-xs text-zinc-400">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-green-500 pulse-green"></span>
+        <span class="text-zinc-300 font-medium">Uberlândia & Região</span>
+      </div>
+      <span class="text-amber-400 font-semibold"><i class="fa-solid fa-clock mr-1"></i>24h com Agendamento</span>
+    </div>
+  </div>
+
+  <!-- Header / Navbar Principal -->
+  <header class="sticky top-0 z-40 bg-zinc-900/90 backdrop-blur-md border-b border-amber-500/30 px-4 py-3">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!-- Rosto do Motorista no Header -->
+      <div class="flex items-center space-x-3">
+        <div class="relative w-11 h-11 rounded-full p-0.5 border-2 border-amber-400 overflow-hidden shadow-md shrink-0">
+          <svg viewBox="0 0 100 100" class="w-full h-full object-cover bg-zinc-800">
+            <circle cx="50" cy="50" r="50" fill="#1f2937" />
+            <path d="M50 42 c7 0 13-6 13-13 s-6-13-13-13 -13 6-13 13 6 13 13 13 z" fill="#d4af37"/>
+            <path d="M22 88 c0-15 12-25 28-25 s28 10 28 25 z" fill="#374151"/>
+            <polygon points="50,63 45,88 55,88" fill="#d4af37" />
+            <polygon points="46,63 50,70 54,63" fill="#ffffff" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-cinzel text-sm sm:text-base font-bold text-amber-400 tracking-wider">LUCAS VACILOTO</h1>
+          <p class="text-[10px] text-zinc-400 uppercase tracking-widest">Motorista Executivo</p>
+        </div>
+      </div>
+
+      <!-- Links Desktop + Botão Rápido -->
+      <div class="flex items-center space-x-4">
+        <nav class="hidden md:flex items-center space-x-6 text-xs font-medium text-zinc-300">
+          <a href="#servicos" class="hover:text-amber-400 transition">Serviços</a>
+          <a href="#veiculo" class="hover:text-amber-400 transition">O Veículo</a>
+          <a href="#personalizar" class="hover:text-amber-400 transition">Simulador</a>
+        </nav>
+
+        <a href="#personalizar" class="bg-amber-500/10 border border-amber-500/50 text-amber-400 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-amber-500/20 transition">
+          <i class="fa-solid fa-sliders text-amber-400 mr-1 text-xs"></i> Simular
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto">
+    <!-- Hero Section -->
+    <section class="px-4 py-8 lg:py-16 text-center max-w-2xl mx-auto">
+      <div class="inline-block bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full text-xs text-amber-300 font-medium mb-3">
+        Transporte Executivo Particular
+      </div>
+      <h2 class="font-cinzel text-2xl sm:text-4xl font-bold text-zinc-100 leading-tight mb-3">
+        Pontualidade, Conforto & <span class="gold-gradient-text">Sigilo Absoluto</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-zinc-400 mb-6 leading-relaxed">
+        Atendimento corporativo e particular sob agendamento prévio na região de Uberlândia.
+      </p>
+
+      <!-- Botão Ação Rápida -->
+      <a href="https://wa.me/5534988676607?text=Olá%20Lucas,%20gostaria%20de%20agendar%20um%20transporte%20executivo." target="_blank" class="gold-bg text-zinc-950 font-bold py-3.5 px-6 rounded-xl w-full sm:w-auto inline-flex items-center justify-center space-x-2 shadow-lg shadow-amber-500/10 hover:opacity-95 transition text-sm">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>RESERVAR VIA WHATSAPP</span>
+      </a>
+    </section>
+
+    <!-- Grid Desktop para Simulador + Veículo/Serviços -->
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 px-4">
+      
+      <!-- Coluna Esquerda: Simulador de Viagem -->
+      <section id="personalizar" class="py-6 lg:col-span-5">
+        <div class="card-dark p-5 rounded-2xl border border-amber-500/40 relative">
+          <div class="flex items-center space-x-2 text-amber-400 mb-1">
+            <i class="fa-solid fa-route text-sm"></i>
+            <span class="text-[10px] font-semibold uppercase tracking-widest">Simulador Rápido</span>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-zinc-100 mb-1">Personalizar Minha Viagem</h3>
+          <p class="text-xs text-zinc-400 mb-4">Monte o seu itinerário e receba o orçamento direto no WhatsApp.</p>
+
+          <form id="tripForm" class="space-y-3">
+            <!-- Tipo de Serviço -->
+            <div>
+              <label class="block text-[11px] font-medium text-zinc-300 mb-1">Tipo de Atendimento:</label>
+              <select id="servicoSelect" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-xs text-zinc-200 focus:border-amber-400 focus:outline-none">
+                <option value="Aeroporto">Aeroporto (Transfer)</option>
+                <option value="Viagem Intermunicipal">Viagem Intermunicipal</option>
+                <option value="Corporativo / Reunião">Corporativo / Reunião</option>
+                <option value="Escolas">Escolas / Rotas Diárias</option>
+                <option value="Eventos / Shows">Eventos / Shows</option>
+                <option value="Entrega VIP">Entrega VIP de Encomendas</option>
+              </select>
+            </div>
+
+            <!-- Origem e Destino -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block text-[11px] font-medium text-zinc-300 mb-1">Origem:</label>
+                <input type="text" id="origemInput" placeholder="Ex: Bairro Santa Mônica" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-xs text-zinc-200 focus:border-amber-400 focus:outline-none">
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-zinc-300 mb-1">Destino:</label>
+                <input type="text" id="destinoInput" placeholder="Ex: Aeroporto UDU" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-xs text-zinc-200 focus:border-amber-400 focus:outline-none">
+              </div>
+            </div>
+
+            <!-- Data e Passageiros -->
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block text-[11px] font-medium text-zinc-300 mb-1">Data / Hora:</label>
+                <input type="text" id="dataInput" placeholder="Ex: Hoje às 15h" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-xs text-zinc-200 focus:border-amber-400 focus:outline-none">
+              </div>
+              <div>
+                <label class="block text-[11px] font-medium text-zinc-300 mb-1">Passageiros:</label>
+                <select id="paxSelect" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg p-2.5 text-xs text-zinc-200 focus:border-amber-400 focus:outline-none">
+                  <option value="1 a 2 Pessoas">1 a 2 Pessoas</option>
+                  <option value="3 Pessoas">3 Pessoas</option>
+                  <option value="4 Pessoas">4 Pessoas (Capacidade Máx.)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Botão Enviar Cotação -->
+            <button type="button" onclick="enviarCotacaoWhatsApp()" class="w-full gold-bg text-zinc-950 font-bold py-3 rounded-xl mt-2 flex items-center justify-center space-x-2 text-xs hover:opacity-95 transition">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>ENVIAR SOLICITAÇÃO PERSONALIZADA</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Coluna Direita: Veículo & Serviços -->
+      <div class="lg:col-span-7">
+        
+        <!-- Seção Veículo: Chevrolet Onix Plus Preto -->
+        <section id="veiculo" class="py-6">
+          <div class="card-dark p-4 sm:p-6 rounded-2xl border border-amber-500/30 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-zinc-950 text-[9px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+              Veículo Oficial
+            </div>
+
+            <div class="flex items-center space-x-2 text-amber-400 mb-1">
+              <i class="fa-solid fa-car text-xs"></i>
+              <span class="text-[10px] font-semibold uppercase tracking-widest">Frota Executiva</span>
+            </div>
+            <h3 class="font-cinzel text-base sm:text-xl font-bold text-zinc-100 mb-3">Chevrolet Onix Plus Preto</h3>
+
+            <div class="grid grid-cols-2 gap-2 text-xs mb-4">
+              <div class="bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800 flex items-center space-x-2">
+                <i class="fa-solid fa-suitcase text-amber-400"></i>
+                <span class="text-[11px] text-zinc-300">Porta-malas 469L</span>
+              </div>
+              <div class="bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800 flex items-center space-x-2">
+                <i class="fa-solid fa-snowflake text-amber-400"></i>
+                <span class="text-[11px] text-zinc-300">Ar Climatizado</span>
+              </div>
+              
+              <!-- Span do Insulfilm comentado para inclusão futura -->
+              <!--
+              <div class="bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800 flex items-center space-x-2">
+                <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                <span class="text-[11px] text-zinc-300">Insulfilm Privacidade</span>
+              </div>
+              -->
+
+              <!-- Informação substituta relevante com ícone de higienização -->
+              <div class="bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800 flex items-center space-x-2">
+                <i class="fa-solid fa-sparkles text-amber-400"></i>
+                <span class="text-[11px] text-zinc-300">Higienização Garantida</span>
+              </div>
+
+              <div class="bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800 flex items-center space-x-2">
+                <i class="fa-solid fa-plug text-amber-400"></i>
+                <span class="text-[11px] text-zinc-300">Tomadas USB</span>
+              </div>
+            </div>
+
+            <!-- Cortesias Atualizadas -->
+            <div class="border-t border-zinc-800 pt-3">
+              <span class="text-[10px] text-zinc-400 uppercase font-semibold block mb-2">Cortesias & Mimos a Bordo:</span>
+              <div class="grid grid-cols-2 gap-y-2 gap-x-1 text-xs text-zinc-300">
+                <span class="flex items-center"><i class="fa-solid fa-bottle-water text-blue-400 mr-1.5"></i> Água Mineral</span>
+                <span class="flex items-center"><i class="fa-solid fa-cookie text-amber-400 mr-1.5"></i> Barra Nutry</span>
+                <span class="flex items-center"><i class="fa-solid fa-candy-cane text-pink-400 mr-1.5"></i> Chicletes & Halls</span>
+                <span class="flex items-center"><i class="fa-solid fa-cube text-amber-500 mr-1.5"></i> Chocolates Trento</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Seção: Tipos de Serviços (Largura total no desktop) -->
+    <section id="servicos" class="px-4 py-6">
+      <div class="flex justify-between items-end mb-4 border-b border-zinc-800 pb-2">
+        <div>
+          <span class="text-[10px] text-amber-400 font-bold uppercase tracking-widest">Atendimento</span>
+          <h3 class="font-cinzel text-lg sm:text-xl font-bold text-zinc-100">Tipos de Serviços</h3>
+        </div>
+        <i class="fa-solid fa-briefcase text-amber-400/50 text-xl"></i>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <!-- Aeroportos -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-plane-departure text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Aeroportos</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Transfers pontuais com auxílio para bagagens.</p>
+        </div>
+
+        <!-- Corporativos -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-building-user text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Corporativos</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Atendimento executivo a empresas e diretores.</p>
+        </div>
+
+        <!-- Escolas -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-graduation-cap text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Escolas</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Rotas escolares com total responsabilidade.</p>
+        </div>
+
+        <!-- Eventos -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-champagne-glasses text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Eventos</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Deslocamento seguro para festas e feiras.</p>
+        </div>
+
+        <!-- Reuniões -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-handshake text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Reuniões</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Disponibilidade por hora para múltiplos compromissos.</p>
+        </div>
+
+        <!-- Entregas -->
+        <div class="card-dark p-3.5 rounded-xl">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+            <i class="fa-solid fa-box-archive text-sm"></i>
+          </div>
+          <h4 class="text-xs font-bold text-zinc-200">Entregas VIP</h4>
+          <p class="text-[10px] text-zinc-400 mt-1">Transporte confidencial de documentos e encomendas.</p>
+        </div>
+
+        <!-- Viagens Intermunicipais -->
+        <div class="card-dark p-3.5 rounded-xl col-span-2 md:col-span-3 lg:col-span-2">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+              <i class="fa-solid fa-route text-sm"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-zinc-200">Viagens Intermunicipais</h4>
+              <p class="text-[10px] text-zinc-400">Rotas para cidades da região com máximo conforto e segurança.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Profissional com Assinatura Dev -->
+  <footer class="mt-8 border-t border-zinc-800/80 pt-6 pb-4 px-4 text-center max-w-6xl mx-auto text-xs text-zinc-500">
+    <p class="mb-2">© 2026 Lucas Vaciloto — Transporte Executivo Autônomo.</p>
+    <p class="text-[11px] text-zinc-400 mb-4">Uberlândia e Região • Atendimento sob agendamento prévio.</p>
+    
+    <div class="border-t border-zinc-900 pt-4 mt-4">
+      <p class="text-[10px] text-zinc-500">
+        Desenvolvido por <a href="https://github.com/dossantoslucasdev" target="_blank" class="text-amber-400 font-semibold hover:underline">dossantoslucasdev</a>
+      </p>
+      <p class="text-[9px] text-zinc-600 mt-1">
+        Motorista, quer um site executivo como este para o seu veículo? <a href="https://wa.me/5534988676607?text=Olá%20Lucas,%20vi%20o%20seu%20site%20e%20tenho%20interesse%20em%20uma%20landing%20page%20para%20mim." target="_blank" class="text-zinc-400 underline hover:text-amber-400">Clique aqui para solicitar</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante do WhatsApp (Visível com destaque no Mobile e Canto inferior no Desktop) -->
+  <div class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:w-80 z-50">
+    <a href="https://wa.me/5534988676607?text=Olá%20Lucas,%20gostaria%20de%20agendar%20um%20transporte%20executivo." target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-4 rounded-xl shadow-xl flex items-center justify-between transition border border-green-400/30">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-white text-xl shrink-0">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="text-left">
+          <div class="text-xs font-bold leading-none">Chamar no WhatsApp</div>
+          <div class="text-[10px] text-green-100/80 font-normal">Atendimento e Reservas</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-chevron-right text-sm text-green-200"></i>
+    </a>
+  </div>
+
+  <!-- Script para integração da Calculadora/Simulador com o WhatsApp -->
+  <script>
+    function enviarCotacaoWhatsApp() {
+      const servico = document.getElementById('servicoSelect').value;
+      const origem = document.getElementById('origemInput').value || 'Não informada';
+      const destino = document.getElementById('destinoInput').value || 'Não informado';
+      const dataHora = document.getElementById('dataInput').value || 'A combinar';
+      const pax = document.getElementById('paxSelect').value;
+
+      const mensagem = `Olá Lucas! Gostaria de cotar um transporte personalizado:%0A%0A` +
+        `• *Serviço:* ${servico}%0A` +
+        `• *Origem:* ${origem}%0A` +
+        `• *Destino:* ${destino}%0A` +
+        `• *Data/Hora:* ${dataHora}%0A` +
+        `• *Passageiros:* ${pax}`;
+
+      window.open(`https://wa.me/5534988676607?text=${mensagem}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
